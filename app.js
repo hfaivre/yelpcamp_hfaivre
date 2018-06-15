@@ -24,7 +24,9 @@ app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 
 //MONDODB CONFIGURATION
-mongoose.connect("mongodb://localhost/yelp_camp_v12");
+//mongoose.connect("mongodb://localhost/yelp_camp_v12");
+mongoose.connect("mongodb://hfaivresaito:Rjygh@tbrxjdn6@ds161740.mlab.com:61740/yelpcamp-demo");
+
 //seedDB();
 
 //SESSION CONFIGURATION

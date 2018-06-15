@@ -25,7 +25,7 @@ app.use(methodOverride("_method"));
 
 //MONDODB CONFIGURATION
 //mongoose.connect("mongodb://localhost/yelp_camp_v12");
-mongoose.connect("mongodb://hfaivresaito:Rjygh@tbrxjdn6@ds161740.mlab.com:61740/yelpcamp-demo");
+mongoose.connect("mongodb://homy:homerefaivre19@ds161740.mlab.com:61740/yelpcamp-demo");
 
 //seedDB();
 

@@ -12,6 +12,7 @@ var User = require("./models/user");
 var methodOverride = require("method-override");
 var flash = require("connect-flash");
 
+//adding random comment to push build
 //Requiring routes
 var commentRoutes = require("./routes/comments");
 var campgroundRoutes = require("./routes/campgrounds");

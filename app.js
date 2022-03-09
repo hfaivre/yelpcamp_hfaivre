@@ -1,4 +1,6 @@
 require('dotenv').config();
+var datadogRum = require('@datadog/browser-rum');
+
 var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
@@ -17,7 +19,20 @@ var flash = require("connect-flash");
 var commentRoutes = require("./routes/comments");
 var campgroundRoutes = require("./routes/campgrounds");
 var indexRoutes = require("./routes/index");
-
+    
+datadogRum.init({
+    applicationId: '211e5e64-e8d4-41c1-9413-02cf636fff57',
+    clientToken: 'pub808a4a2bd004508c689c99c351e5f7cc',
+    site: 'datadoghq.com',
+    service:'yelpcamp',
+    // Specify a version number to identify the deployed version of your application in Datadog 
+    // version: '1.0.0',
+    sampleRate: 100,
+    trackInteractions: true,
+    defaultPrivacyLevel: 'mask-user-input'
+});
+    
+datadogRum.startSessionReplayRecording();
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended:true}));
